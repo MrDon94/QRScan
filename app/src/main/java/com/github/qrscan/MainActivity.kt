@@ -1,10 +1,12 @@
-package com.github.qrscanlib
+package com.github.qrscan
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.github.qrscanlib.Intents
+import com.github.qrscanlib.QrScanActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btnStart: Button

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 project(ZXingCppAndroid)
 
 # The zxing-cpp requires at least C++17 to build

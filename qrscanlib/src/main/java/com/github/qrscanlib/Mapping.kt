@@ -3,7 +3,7 @@ package com.github.qrscanlib
 import android.graphics.Matrix
 import android.graphics.Rect
 import android.graphics.RectF
-import de.markusfisch.android.zxingcpp.ZxingCpp.Position
+import com.github.qrscanlib.ZxingCpp.Position
 import kotlin.math.roundToInt
 
 data class FrameMetrics(

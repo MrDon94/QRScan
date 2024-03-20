@@ -48,8 +48,7 @@ android {
 dependencies {
     api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-//    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "com.android.support:appcompat-v7:${support_version}"
-    //二维码扫描(包含一个zxing-cpp-2.2.0.3.aar) https://github.com/markusfisch/BinaryEye
+    //相机预览控件 https://github.com/markusfisch/BinaryEye
     api 'com.github.markusfisch:CameraView:1.10.0'
 }

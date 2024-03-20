@@ -31,5 +31,4 @@ android {
 
 dependencies {
     implementation project(path: ':qrscanlib')
-//    implementation 'com.github.MrDon94:QRScan:v1.0.0'
 }

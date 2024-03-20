@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import de.markusfisch.android.cameraview.widget.CameraView
-import de.markusfisch.android.zxingcpp.ZxingCpp
 
 /**
  * @author: cd

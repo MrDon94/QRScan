@@ -4,15 +4,22 @@ plugins {
 }
 
 android {
-    compileSdkVersion compileSdk
+    compileSdkVersion rootProject.compileSdk
+    ndkVersion "26.2.11394342"
 
     defaultConfig {
-        minSdkVersion minSdk
-        targetSdkVersion sdk
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.sdk
         versionCode 1
         versionName "1.0"
 
         consumerProguardFiles "consumer-rules.pro"
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_BUILD_TYPE=RelWithDebInfo", \
+					"-DANDROID_ARM_NEON=ON"
+            }
+        }
     }
 
     buildTypes {
@@ -21,6 +28,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    externalNativeBuild {
+        cmake {
+            version "3.18.1"
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -33,6 +48,7 @@ android {
 dependencies {
     api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "com.android.support:appcompat-v7:${support_version}"
     //二维码扫描(包含一个zxing-cpp-2.2.0.3.aar) https://github.com/markusfisch/BinaryEye
     api 'com.github.markusfisch:CameraView:1.10.0'
